@@ -16,6 +16,10 @@ package com.espertech.esper.common.client.soda;
 public enum ExpressionPrecedenceEnum {
 
     /**
+     * Mark operation to always be considered as preceding
+     */
+    ALWAYS(Integer.MAX_VALUE),
+    /**
      * Precedence.
      */
     UNARY(11),

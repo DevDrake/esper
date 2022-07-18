@@ -101,7 +101,7 @@ public class ArithmaticExpression extends ExpressionBase {
 
     public ExpressionPrecedenceEnum getPrecedence() {
         if (operator.equals("*") || operator.equals("/") || operator.equals("%")) {
-            return ExpressionPrecedenceEnum.MULTIPLY;
+            return ExpressionPrecedenceEnum.ALWAYS;
         } else {
             return ExpressionPrecedenceEnum.ADDITIVE;
         }

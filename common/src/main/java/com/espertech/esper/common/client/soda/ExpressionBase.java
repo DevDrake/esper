@@ -61,7 +61,7 @@ public abstract class ExpressionBase implements Expression {
     }
 
     public final void toEPL(StringWriter writer, ExpressionPrecedenceEnum parentPrecedence) {
-        if (this.getPrecedence().getLevel() < parentPrecedence.getLevel()) {
+        if (this.getPrecedence().getLevel() < parentPrecedence.getLevel() || parentPrecedence.getLevel() == ExpressionPrecedenceEnum.ALWAYS.getLevel()) {
             writer.write("(");
             toPrecedenceFreeEPL(writer);
             writer.write(")");
